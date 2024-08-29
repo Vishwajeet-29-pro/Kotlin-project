@@ -12,7 +12,8 @@ fun main() {
 
     printPrimitiveDataTypes()
     printString()
-    nullSafety()
+//    nullSafety() // this one throws exception
+    controlStructures(2, 5)
 }
 
 fun printPrimitiveDataTypes() {
@@ -60,4 +61,37 @@ fun nullSafety() {
     val lengthOfName = name!!.length // throws NullPointerException if name is null
 
     println("Non null assertion: $lengthOfName")
+}
+
+fun controlStructures(a: Int, b: Int) {
+    val max = if (a > b) a else b
+    println("Max is $max")
+
+    var min = 0
+    min = if (a < b) a
+    else if (a == b) a
+    else b
+    println("Min is $min")
+
+
+    when (a) {
+        1 -> println("a == 1")
+        2 -> println("a == 2")
+        else -> println("a is neither 1 nor 2")
+    }
+
+    for (i in 1..b) {
+        println(i)
+    }
+
+    var c = 5
+    while (c > 0) {
+        println("C is now $c")
+        c--
+    }
+
+    val range = 1..5
+    for (i in range) {
+        print(i)
+    }
 }
