@@ -1,4 +1,4 @@
-package com.practice.examples
+package com.practice.examples.function
 
 fun main() {
     // to call the function simply call the name of function followed by parenthesis.
