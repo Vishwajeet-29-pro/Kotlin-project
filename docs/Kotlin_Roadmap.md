@@ -12,10 +12,10 @@
 
    - [x] Function declaration and calling 
    - [x] Default and named arguments 
-   - [ ] Single-expression functions 
+   - [x] Single-expression functions 
    - [ ] Higher-order functions 
    - [ ] Inline functions 
-   - [ ] Lambda expressions
+   - [x] Lambda expressions
 
    ##### Object-Oriented Programming
 
