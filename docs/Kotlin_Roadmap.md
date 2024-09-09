@@ -19,12 +19,12 @@
 
    ##### Object-Oriented Programming
 
-   - [ ] Classes and objects 
-   - [ ] Properties and methods 
-   - [ ] Constructors (Primary and Secondary)
+   - [x] Classes and objects 
+   - [x] Properties and methods 
+   - [x] Constructors (Primary and Secondary)
    - [ ] Inheritance 
    - [ ] Abstract classes and interfaces 
-   - [ ] Visibility modifiers (public, private, protected, internal)
+   - [X] Visibility modifiers (public, private, protected, internal)
 
    ##### Collections
 
