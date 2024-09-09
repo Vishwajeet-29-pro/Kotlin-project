@@ -38,3 +38,9 @@ fun main() {
     DatabaseSingleton.connect()
     println(CarClass.carInfo())
 }
+
+//Kotlin has four visibility modifiers for classes, objects, and members:
+//public: Visible everywhere (default modifier).
+//private: Visible only within the class or file.
+//protected: Visible in the class and subclasses.
+//internal: Visible within the same module.
