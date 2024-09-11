@@ -27,9 +27,89 @@ class DogClass: MyInterface {
     override val numberOfLegs: Int = 4
 }
 
+
+// Default method
+// Interfaces in kotlin can have methods with default implementation. Classes that implements the interface can choose to
+// override these methods or use the default ones.
+interface VehicleInterface {
+    fun drive() {
+        println("Default method: Vehicle is driving")
+    }
+
+    fun stop() // abstract method
+}
+
+class VehicleInterfaceImpl: VehicleInterface {
+    override fun stop() {
+        println("Vehicle stopped!!")
+    }
+}
+
+// Properties in Interface
+// Kotlin interface can also contain properties. These properties can be abstract or have a default implementation. If the
+// property is abstract, the class implementing the interface must provide the getter (and setter if it's mutable)
+interface Person {
+    val name: String
+    val age: Int
+        get() = 30
+}
+
+class Student(override val name: String) : Person
+
+
+// Multiple Interfaces
+// A class can implement multiple interfaces. If two interfaces have same methods with the same signature, the class must
+// explicitly override methods and resolve any conflicts.
+interface A {
+    fun show() {
+        println("A's Show")
+    }
+}
+
+interface B {
+    fun show() {
+        println("B's Show")
+    }
+}
+
+class C: A, B {
+    override fun show() {
+        super<A>.show()
+        super<B>.show()
+    }
+}
+
+// Kotlin support Functional Interfaces and SAM Conversions
+// Kotlin support functional interfaces, which are interfaces with single abstract method(SAM - Single Abstract Method)
+// These are useful lambda expressions. Kotlin automatically converts a lambda to an instance of Functional interface.
+// The `fun` keyword is used to create a functional interface.
+fun interface MyFunction {
+    fun invoke(x: Int): Int
+}
+
 fun main() {
     val dog = DogClass()
     dog.sound()
     println("The number of legs are ${dog.numberOfLegs}")
+
+    println("\nDefault methods")
+    val vehicle = VehicleInterfaceImpl()
+    vehicle.drive()
+    vehicle.stop()
+
+    println("\nProperties in interface")
+    val student = Student("Vishwajeet")
+    println(student.name)
+    println(student.age)
+
+    println("\nMultiple interface ")
+    val c = C()
+    c.show()
+
+    println("\nFunctional Interface")
+    // kotlin automatically converts the lambda to an instance of the interface.
+    val square: MyFunction = MyFunction { it * it }
+    val result = square.invoke(10)
+    println("The square of number $result")
 }
 
