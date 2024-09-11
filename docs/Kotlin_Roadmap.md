@@ -22,8 +22,8 @@
    - [x] Classes and objects 
    - [x] Properties and methods 
    - [x] Constructors (Primary and Secondary)
-   - [ ] Inheritance 
-   - [ ] Abstract classes and interfaces 
+   - [x] Inheritance 
+   - [x] Abstract classes and interfaces 
    - [X] Visibility modifiers (public, private, protected, internal)
 
    ##### Collections
