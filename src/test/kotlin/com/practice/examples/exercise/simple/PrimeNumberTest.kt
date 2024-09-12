@@ -1,6 +1,5 @@
-package exercise.simple
+package com.practice.examples.exercise.simple
 
-import com.practice.examples.exercise.simple.primeNumber
 import org.junit.jupiter.api.Test
 import org.junit.jupiter.api.assertAll
 import kotlin.test.assertEquals
