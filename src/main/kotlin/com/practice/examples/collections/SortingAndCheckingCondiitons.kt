@@ -40,4 +40,16 @@ fun main() {
     println("\nnone { } ")
     val lessThanZero = numbers.none { it < 0 }
     println(lessThanZero) // returns true as all number are greater than one.
+
+    // find
+    // returns the first element that matches the given predicate or null if elements match
+    println("\nfind { } ")
+    val firstEven = numbers.find { it % 2 == 0 }
+    println(firstEven)
+
+    // findLast()
+    // returns the last element that given the predicate.
+    println("\nfindLast { } ")
+    val lastEven = numbers.findLast { it % 2 == 0 }
+    println(lastEven)
 }
