@@ -30,9 +30,9 @@
 
    - [x] Lists, Sets, Maps 
    - [x] Mutable vs Immutable collections 
-   - [ ] Common operations (filter, map, reduce, etc.)
+   - [x] Common operations (filter, map, reduce, etc.)
    - [x] Collection builders (listOf, setOf, mapOf)
-   - [ ] Sequences
+   - [x] Sequences
 
    ##### Kotlin Standard Library
 
