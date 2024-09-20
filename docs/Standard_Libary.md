@@ -93,3 +93,95 @@ This demonstrates the static nature of extension function.
 
 
 
+
+
+## What is Scope Functions
+Scope functions are the part of standard library and provide a concise way to operate on objects within a limited scope. Scope function allows you to
+define temporary scopes for objects, which can help in avoiding reputation and improving code readability.
+Kotlin has five main scope functions:
+- let
+- apply
+- run
+- also
+- with
+
+#### Key Difference Between Scope Functions
+The main differences between scope functions lie in:
+1. **Object Reference:** Whether they are reference context object using it or this.
+2. **Return Value:** Whether they return the context object itself or the result of the lambda.
+
+Here is a breakdown of each scope function:
+
+1. `let`
+    - Purpose: Used to perform operations on a nullable object or chain operations.
+    - Object References: it (the object is passed as an argument to the lambda)
+    - Return Value: Returns the result of the lambda expression.
+
+   **Use Case:** You want to execute some code on an object and returns a different value, often used for null-check or transformations.
+    ```gherkin
+    val str: String? = "Hello, Kotlin"
+    val result = str.let {
+      println(it) // prints the "Hello, Kotlin"
+      it.length // return the length of the string
+    }
+    println(result) // 13
+    ```
+
+2. `apply`
+    - Purpose: USed for object configuration, It is useful when you want to initialize or configure an object and then return the object itself.
+    - Object Reference: `this` (the object is referenced inside the lambda using `this`).
+    - Return Value: Returns the object itself.
+    **Use Case:** You want to initialize or configure an object and return that object itself. 
+    ```gherkin
+        val person = Person().apply {
+            name = "John"
+            age = 30
+        }
+        println(person) // Returns the modified object: Person(name=John, age=30)
+    ```
+   
+3. `run`
+    - Purpose: Used to execute a block of code on an object and return the result.
+    - Object Reference: `this`.
+    - Return Value: Returns the result of the lambda expression.
+    **Use Case:** You want to perform some computations on an object and return a value based on those computations.
+    ```gherkin
+      val person = Person(name = "Alice", age = 25)
+      val greeting = person.run {
+          "Hello, my name is $name and I am $age years old."
+      }
+      println(greeting)
+    ```
+4. `also`
+    - Purpose: Similar to let, but returns the object itself. It is often used for side effects, such as logging or debugging.
+    - Object Reference: `it`.
+    - Return Value: Returns the object itself.
+   **Use Case:** You want to do something with an object (like logging or debugging) and returns the object itself afterward.
+    ```gherkin
+      val numbers = mutableListOf(1, 2, 3)
+      numbers.also {
+        println("List before adding: $it")
+      }.add(4)
+      println(numbers) // output [1, 2, 3, 4]
+    ```
+
+5. `with`
+    - Purpose: Used to operate on an object in a non-null context and return the result.
+    - Object Reference: `this`.
+    - Return Value: Returns the result of the lambda expression.
+   **Use Case:** You want to perform multiple operations on an object and return a result without needing to reference the object each time.
+```gherkin
+    val person = Person(name = "Bob", age = 32)
+    val description = with(person) {
+      "Name: $name, Age: $age"
+    }
+    println(description)
+```
+
+| Scope Function | Object Reference | Return Value  | Typical Use case                                       |
+|----------------|------------------|---------------|--------------------------------------------------------|
+| `let`          | `it`             | Lambda Result | Null checks, transformation, chaining                  |
+| `apply`        | `this`           | Object Itself | Object initialization/ configuration                   |
+| `run`          | `this`           | Lambda Result | Performing operations that result in a value           |   
+| `also`         | `it`             | Object Itself | Side effects like logging, then returning the object   |
+| `with`         | `this`           | Lambda Result | Operation on a non-null object and returning a result. |
