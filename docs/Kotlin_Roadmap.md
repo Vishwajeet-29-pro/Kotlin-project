@@ -37,7 +37,7 @@
    ##### Kotlin Standard Library
 
    - [x] Extensions functions 
-   - [ ] Scope functions (let, run, with, apply, also)
+   - [x] Scope functions (let, run, with, apply, also)
    - [ ] Type checks and casts (is, as)
 
 2. Intermediate Topics
