@@ -38,7 +38,7 @@
 
    - [x] Extensions functions 
    - [x] Scope functions (let, run, with, apply, also)
-   - [ ] Type checks and casts (is, as)
+   - [x] Type checks and casts (is, as)
 
 2. Intermediate Topics
    ##### Functional Programming
