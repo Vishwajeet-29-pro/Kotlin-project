@@ -28,4 +28,11 @@ class InsertSearchPositionTest {
         val expected = 4
         assertEquals(expected, insertSearchPosition.searchInsert(arr, target))
     }
+
+    @Test
+    fun `test insert search position for zero`() {
+        val target = 0
+        val expected = 0
+        assertEquals(expected, insertSearchPosition.searchInsert(arr, target))
+    }
 }
