@@ -185,3 +185,71 @@ Here is a breakdown of each scope function:
 | `run`          | `this`           | Lambda Result | Performing operations that result in a value           |   
 | `also`         | `it`             | Object Itself | Side effects like logging, then returning the object   |
 | `with`         | `this`           | Lambda Result | Operation on a non-null object and returning a result. |
+
+# Type Checks and Casts (is, as)
+
+In, Kotlin type checks and casts are essential features that help you work safely with types at runtime. Kotlin provides the `is` operator for type checking and the `as` operator for type casting. Here's a detailed look at how these work:
+### Type Checks with `is`
+The `is` operator checks whether an object is of a specific type. If the object is of that type, the check returns `true`, and you can safely access its properties and methods without needing to cast it explicitly.
+#### Example of Type Checks
+```
+fun printLength(input: Any) {
+	if(input is String) {
+		println("Length of the string is: ${input.length})
+	} else {
+		println("Input is not a String")
+	}
+}
+
+fun main() {
+	printLength("Hello, Kotlin")
+	printLength(123)
+}
+```
+In the example, if input is a string, Kotlin automatically smart casts it to string inside the if block, allowing you to access the length property.
+
+### Type Casting with `as`
+The `as` operator is used for type casting. It can be used in two forms:
+1. Unsafe Cast: `as`
+2. Safe Cast: `as?`
+
+**Unsafe Cast (as)**:
+If you are sure about the type of an object, you can use `as`. However, if the object cannot be cast to the specified type,  it will throw a `ClassCastException`.
+Example:
+```
+fun castToString(input: Any): String {
+	return input as String
+}
+
+fun main() {
+	val str: Any = "Hello, Kotlin!"
+	val result = castToString(str)
+	println(result)
+	
+	val number: Any = 123
+	// castToString(number) // this will throw ClassCastException
+}
+```
+
+**Safe Cast (as?)**
+The safe cast operator `as?` returns null if the object cannot be cast to the specified type, avoiding exceptions.
+```
+fun safeCasting(input: Any): String {
+	return input as? String
+}
+
+fun main() {
+	val str: Any = "Hello, Kotlin!"
+	val result1 = safeCasting(str)
+	println(result1)
+	
+	val number: Any = 123
+	val result2 = safeCasting(number)
+	println(result2) // returns null
+}
+```
+
+### Summary of Type Checks and Casts
+- `is`: Use it to check if an object is of a certain type. Smart casts the object to that type inside the block.
+- `as`: Use for an unsafe cast. It will throw an exception if the object is not of the specified type.
+- `as?`: Use for a safe cast. It returns null if the object cannot be cast to the specified type.
