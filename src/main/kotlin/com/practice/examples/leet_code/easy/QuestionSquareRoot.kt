@@ -9,10 +9,11 @@ class QuestionSquareRoot {
 
         while (start <= end) {
             val mid = start + (end - start) / 2
+            val square: Long = mid.toLong() * mid.toLong()
 
-            if (mid.toLong() * mid.toLong() == x.toLong()) {
+            if (square == x.toLong()) {
                 return mid
-            } else if (mid.toLong() * mid.toLong() <= x.toLong()) {
+            } else if (square <= x.toLong()) {
                 start = mid + 1
             } else {
                 end = mid - 1
