@@ -13,4 +13,11 @@ class SquareRootTest {
         val actual = sqrt.mySqrt(input)
         assertEquals(expected, actual)
     }
+
+    @Test
+    fun `test square root for long number` () {
+        val input = 2147395599
+        val expected = 46339
+        assertEquals(expected, sqrt.mySqrt(input))
+    }
 }
