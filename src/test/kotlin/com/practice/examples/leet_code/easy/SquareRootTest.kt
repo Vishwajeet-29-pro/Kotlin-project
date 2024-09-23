@@ -20,4 +20,11 @@ class SquareRootTest {
         val expected = 46339
         assertEquals(expected, sqrt.mySqrt(input))
     }
+
+    @Test
+    fun `test square root for zero should return zero` () {
+        val input = 0
+        val expected = 0
+        assertEquals(expected, sqrt.mySqrt(input))
+    }
 }
