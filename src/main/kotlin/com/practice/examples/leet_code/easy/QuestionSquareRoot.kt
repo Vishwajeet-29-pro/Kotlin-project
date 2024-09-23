@@ -2,6 +2,8 @@ package com.practice.examples.leet_code.easy
 
 class QuestionSquareRoot {
     fun mySqrt(x: Int): Int {
+        if (x <= 0) return 0
+
         var start = 0
         var end = x
 
