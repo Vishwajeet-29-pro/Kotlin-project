@@ -43,8 +43,8 @@
 2. Intermediate Topics
    ##### Functional Programming
 
-   - [ ] Higher-order functions 
-   - [ ] Lambda expressions 
+   - [x] Higher-order functions 
+   - [x] Lambda expressions 
    - [ ] Closures 
    - [ ] Recursion 
    - [ ] Functional interfaces (SAM conversions)
