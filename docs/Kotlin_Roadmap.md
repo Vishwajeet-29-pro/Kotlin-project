@@ -45,8 +45,8 @@
 
    - [x] Higher-order functions 
    - [x] Lambda expressions 
-   - [ ] Closures 
-   - [ ] Recursion 
+   - [X] Closures 
+   - [x] Recursion 
    - [ ] Functional interfaces (SAM conversions)
    - [ ] Anonymous functions
 
