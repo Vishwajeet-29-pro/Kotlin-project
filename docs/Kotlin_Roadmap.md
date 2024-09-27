@@ -47,8 +47,8 @@
    - [x] Lambda expressions 
    - [X] Closures 
    - [x] Recursion 
-   - [ ] Functional interfaces (SAM conversions)
-   - [ ] Anonymous functions
+   - [x] Functional interfaces (SAM conversions)
+   - [x] Anonymous functions
 
    ##### Coroutines
 
