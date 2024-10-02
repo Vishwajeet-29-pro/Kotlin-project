@@ -17,7 +17,7 @@ suspend fun fetchSecondValue(): Int {
     return 20
 }
 
-fun main() = runBlocking {
+fun mainCoroutine() = runBlocking {
     val time = measureTimeMillis {
         val first = async { fetchFirstValue() }
         val second = async { fetchSecondValue() }
