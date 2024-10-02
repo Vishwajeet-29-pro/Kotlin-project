@@ -10,6 +10,8 @@ repositories {
 }
 
 dependencies {
+    implementation ("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.7.1")
+
     testImplementation(kotlin("test"))
     testImplementation("org.junit.jupiter:junit-jupiter-api:5.10.3")
     testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:5.10.3")
