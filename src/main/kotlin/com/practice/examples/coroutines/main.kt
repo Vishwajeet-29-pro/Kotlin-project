@@ -12,6 +12,9 @@ fun main() {
 //    println("Using withContext for Context Switching...")
 //    mainWithContext() // for context Switching
 
-    println("Handling Exceptions in Coroutines")
-    mainExceptionHandling()
+//    println("Handling Exceptions in Coroutines")
+//    mainExceptionHandling()
+
+    println("Structured Concurrency with coroutineScope")
+    mainCoroutineScope()
 }
