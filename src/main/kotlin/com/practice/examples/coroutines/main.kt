@@ -15,6 +15,9 @@ fun main() {
 //    println("Handling Exceptions in Coroutines")
 //    mainExceptionHandling()
 
-    println("Structured Concurrency with coroutineScope")
-    mainCoroutineScope()
+//    println("Structured Concurrency with coroutineScope")
+//    mainCoroutineScope()
+
+    println("Using Channels for Communication")
+    mainChannel()
 }
