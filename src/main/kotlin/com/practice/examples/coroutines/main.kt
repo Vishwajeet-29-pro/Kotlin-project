@@ -9,6 +9,9 @@ fun main() {
 //    println()
 //    mainDispatcher() // Dispatcher and Threading example
 
-    println("Using withContext for Context Switching...")
-    mainWithContext() // for context Switching
+//    println("Using withContext for Context Switching...")
+//    mainWithContext() // for context Switching
+
+    println("Handling Exceptions in Coroutines")
+    mainExceptionHandling()
 }
