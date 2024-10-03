@@ -18,6 +18,9 @@ fun main() {
 //    println("Structured Concurrency with coroutineScope")
 //    mainCoroutineScope()
 
-    println("Using Channels for Communication")
-    mainChannel()
+//    println("Using Channels for Communication")
+//    mainChannel()
+
+    println("Performing Parallel Decomposition")
+    mainParallelDecomposition()
 }
