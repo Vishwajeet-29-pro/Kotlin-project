@@ -21,6 +21,9 @@ fun main() {
 //    println("Using Channels for Communication")
 //    mainChannel()
 
-    println("Performing Parallel Decomposition")
-    mainParallelDecomposition()
+//    println("Performing Parallel Decomposition")
+//    mainParallelDecomposition()
+
+    println("Using supervisorScope")
+    mainSupervisorScope()
 }
