@@ -24,6 +24,9 @@ fun main() {
 //    println("Performing Parallel Decomposition")
 //    mainParallelDecomposition()
 
-    println("Using supervisorScope")
-    mainSupervisorScope()
+//    println("Using supervisorScope")
+//    mainSupervisorScope()
+
+    println("Implementing a Producer-Consumer with Channels:")
+    mainProducerConsumer()
 }
