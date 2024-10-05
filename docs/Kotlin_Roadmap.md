@@ -52,8 +52,8 @@
 
    ##### Coroutines
 
-   - [ ] Basics of coroutines 
-   - [ ] Launching coroutines (launch, async)
+   - [x] Basics of coroutines 
+   - [x] Launching coroutines (launch, async)
    - [ ] Scopes (GlobalScope, CoroutineScope)
    - [ ] Dispatchers (Main, IO, Default)
    - [ ] Suspending functions 
