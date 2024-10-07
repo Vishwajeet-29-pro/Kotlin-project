@@ -16,4 +16,19 @@ class MergeStringsAlternativelyTest {
 
         assertEquals(expected, actual)
     }
+
+    @Test
+    fun `test merge string for unequal strings (first word length less than second)` () {
+        val word1 = "ab"
+        val word2 = "pqr"
+        val expected = "apbqr"
+        assertEquals(expected, mergeString.mergeAlternately(word1, word2))
+    }
+
+    @Test
+    fun `test merge string for unequal length (first word length is greater than second)` () {
+        val word1 = "abcd"
+        val word2 = "pq"
+        val expected = "apbqc"
+    }
 }
