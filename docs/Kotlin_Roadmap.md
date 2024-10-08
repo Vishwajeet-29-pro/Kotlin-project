@@ -54,8 +54,8 @@
 
    - [x] Basics of coroutines 
    - [x] Launching coroutines (launch, async)
-   - [ ] Scopes (GlobalScope, CoroutineScope)
-   - [ ] Dispatchers (Main, IO, Default)
+   - [x] Scopes (GlobalScope, CoroutineScope)
+   - [x] Dispatchers (Main, IO, Default)
    - [ ] Suspending functions 
    - [ ] Handling exceptions in coroutines 
    - [ ] Structured concurrency 
