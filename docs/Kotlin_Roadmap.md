@@ -58,8 +58,8 @@
    - [x] Dispatchers (Main, IO, Default)
    - [x] Suspending functions 
    - [x] Handling exceptions in coroutines 
-   - [ ] Structured concurrency 
-   - [ ] Channels and Flows 
+   - [x] Structured concurrency 
+   - [x] Channels and Flows 
    
    ##### Advanced OOP Concepts
 
