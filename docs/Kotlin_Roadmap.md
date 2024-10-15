@@ -63,8 +63,8 @@
    
    ##### Advanced OOP Concepts
 
-   - [ ] Data classes 
-   - [ ] Object keyword (Singletons, companion objects)
+   - [x] Data classes 
+   - [x] Object keyword (Singletons, companion objects)
    - [ ] Enum classes 
    - [ ] Sealed classes 
    - [ ] Delegation 
