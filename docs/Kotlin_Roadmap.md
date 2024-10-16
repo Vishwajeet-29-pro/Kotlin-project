@@ -65,8 +65,8 @@
 
    - [x] Data classes 
    - [x] Object keyword (Singletons, companion objects)
-   - [ ] Enum classes 
-   - [ ] Sealed classes 
+   - [x] Enum classes 
+   - [x] Sealed classes 
    - [ ] Delegation 
    - [ ] Operator overloading
 
