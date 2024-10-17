@@ -60,3 +60,62 @@ fun main() {
 ```
 In this example, the property `data` is initialized lazily only when it's accessed for the first time.
 
+# 2. Operator Overloading in Kotlin
+Kotlin allows you to provide custom implementation for a predefined set of operators on your types. This is done by defining a function
+with a specific name for the corresponding operator. Operator overloading makes your custom classes easier to work with by allowing them to use 
+common operators like `+`, `-`, `*`, `==`, etc
+
+Key points:
+- Only a predefined set of operators can be overloaded.
+- The function must be marked with the `operator` keyword.
+
+### Example: Overloading `+` operator for a custom class
+```kotlin
+data class Point(val x: Int, val y:Int) {
+    operator fun plus(other: Point): Point {
+        return Point(x + other.x, y + other.y)
+    }
+}
+
+fun main() {
+    val point1 = Point(10, 20)
+    val point2 = Point(5, 10)
+    val result = point1 + point2
+    println(result)
+}
+```
+In this example, we overloaded the `+` operator for the Point class to add the x and y values of two points.
+
+#### Common Operators that can be Overloaded:
+- Arithmetic Operator: `+`,`-`,`*`,`/`,`%`
+- Comparison Operators: ==, !=, >, <, >=, <=
+- Assignment Operators: +=, -=, *=, /=
+- Unary Operators: +, -, ++, --
+- Indexing: []
+- Invoke Operator: ()
+
+## Example: Overloading `invoke()` operator
+You can overload the `invoke()` operator to make your objects callable like functions:
+```kotlin
+class CallableObject {
+    operator fun invoke(value: String) {
+        println("You called me with: $value")
+    }
+}
+
+fun main() {
+    val callable = CallableObject()
+    callable("Hello Kotlin!")
+}
+```
+
+In this example, CallableObject overloads the `invoke` operator, allowing an instance of this clas to be called like a function.
+
+### Summary of Delegation and Operator Overloading
+Delegation:
+- Class Delegation: Delegates the implementation of an interface to another class using the by keyword. Useful for reusing behavior without inheritance.
+- Property Delegation: Delegates getter/setter behavior to another object or logic. Includes built-in delegates like lazy, observable, etc.
+
+Operator Overloading:
+- Kotlin allows overloading certain operators (+, -, [], ==, (), etc.) for custom types.
+- Overloading makes classes more intuitive to use by leveraging standard operators.
