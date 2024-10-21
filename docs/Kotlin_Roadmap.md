@@ -67,8 +67,8 @@
    - [x] Object keyword (Singletons, companion objects)
    - [x] Enum classes 
    - [x] Sealed classes 
-   - [ ] Delegation 
-   - [ ] Operator overloading
+   - [x] Delegation 
+   - [x] Operator overloading
 
    ##### Type System
 
