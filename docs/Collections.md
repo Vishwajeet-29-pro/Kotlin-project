@@ -5,6 +5,10 @@ between mutable and immutable collections, allowing flexibility depending on whe
 
 ~~As we already added details notes in actual implementation of these collections we can skip that notes~~
 ### Difference between List and Set
+[ListImplementation.kt](../src/main/kotlin/com/practice/examples/collections/ListImplementation.kt)
+[SetImplementation.kt](../src/main/kotlin/com/practice/examples/collections/SetImplementation.kt)
+[MapImplementation.kt](../src/main/kotlin/com/practice/examples/collections/MapImplementation.kt)
+
 | List                 | Set                       |
 |----------------------|---------------------------|
 | Allows Duplicate     | Does not allows duplicate |
