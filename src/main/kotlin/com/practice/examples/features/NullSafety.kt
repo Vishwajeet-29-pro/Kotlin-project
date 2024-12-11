@@ -1,4 +1,4 @@
-package com.practice.examples
+package com.practice.examples.features
 
 fun main() {
     var a: String = "abc"
